@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container fluid fill-height class="justify-center">
+        <v-card style="width:300px">
+          <v-card-text>
+            <v-menu offset-y v-model="menu">
+              <template #activator="{on}">
+                <v-text-field
+                  v-on="on"
+                  label="click to select icon"
+                  hide-details
+                  :prepend-inner-icon="selected"
+                  v-model="selected"
+                  single-line
+                >
+                </v-text-field>
+              </template>
+              <v-card @click.stop.native>
+                <icon-picker v-model="selected" />
+              </v-card>
+            </v-menu>
+          </v-card-text>
+        </v-card>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IconPicker from "./components/IconPicker.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    IconPicker
+  },
+  data: () => ({
+    selected: "",
+    menu: false
+  })
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  overflow: auto;
 }
 </style>
