@@ -17,7 +17,7 @@
                 </v-text-field>
               </template>
               <v-card @click.stop.native flat>
-                <icon-picker v-model="selected" height="200" />
+                <icon-picker v-model="selected" contentHeight="200" />
               </v-card>
             </v-menu>
           </v-card-text>
