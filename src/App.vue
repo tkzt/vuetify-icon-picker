@@ -16,8 +16,8 @@
                 >
                 </v-text-field>
               </template>
-              <v-card @click.stop.native>
-                <icon-picker v-model="selected" height="240" />
+              <v-card @click.stop.native flat>
+                <icon-picker v-model="selected" height="200" />
               </v-card>
             </v-menu>
           </v-card-text>
