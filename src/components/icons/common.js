@@ -96,7 +96,7 @@ export default [
   'mdiImageSizeSelectActual',
   'mdiResizeBottomRight',
   'mdiConsole',
-  'mdiArchiveOutline',
+  'mdiFolderOpenOutline',
   'mdiParachuteOutline',
-  'mdiFaceManProfile',
+  'mdiFaceManProfile'
 ];
