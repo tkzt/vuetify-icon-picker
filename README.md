@@ -47,7 +47,7 @@ export default {
 
 ![](assets/example.png)
 
-更具体的示例见[此](https://boring-plans.github.io/vuetify-icon-picker/)。
+更具体的示例见[此](https://tkzt.github.io/vuetify-icon-picker/)。
 
 ## 组件 API
 
